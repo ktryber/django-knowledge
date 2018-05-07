@@ -12,7 +12,7 @@
 <div class="dk-widget">
 
   <div class="dk-dialog">
-    <div class="the-author gravatar"><img src="{% get_gravatar question.get_email %}" alt="{{ question.get_name }} gravatar"></div>
+    <!--<div class="the-author gravatar"><img src="#" alt="{{ question.get_name }} gravatar"></div>-->
     <div class="the-content gravatar">
       <h2>{{ question.title }}</h2>
       <h5>{{ question.get_name }} <span class="quiet">
@@ -36,7 +36,7 @@
 
   {% for response in responses %}
     <div class="dk-dialog">
-      <div class="the-author gravatar smaller"><img src="{% get_gravatar response.get_email 40 %}" alt="{{ response.get_name }} gravatar"></div>
+      <!--<div class="the-author gravatar smaller"><img src="#" alt="{{ response.get_name }} gravatar"></div>-->
       <div class="the-content gravatar">
         <h5>{{ response.get_name }} <span class="quiet">
           {% if response.accepted %}&nbsp;<span class="dk-label dk-label-warning">{% trans "accepted answer" %}</span>{% endif %}
