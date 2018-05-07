@@ -1,8 +1,8 @@
-import settings
+from knowledge import settings
 
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
-from django.core.urlresolvers import reverse, NoReverseMatch
+from django.urls import reverse, NoReverseMatch
 from django.db.models import Q
 
 from knowledge.models import Question, Response, Category
@@ -104,7 +104,7 @@ def knowledge_thread(request,
 
     if settings.LOGIN_REQUIRED and not request.user.is_authenticated():
         return HttpResponseRedirect(settings.LOGIN_URL+"?next=%s" % request.path)
-    
+
     try:
         question = Question.objects.can_view(request.user)\
                                    .get(id=question_id)

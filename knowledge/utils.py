@@ -36,9 +36,9 @@ def get_module(path):
     try:
         mod_name, func_name = path.rsplit('.', 1)
         mod = import_module(mod_name)
-    except ImportError, e:
+    except ImportError:
         raise ImportError(
-            'Error importing alert function {0}: "{1}"'.format(mod_name, e))
+            'Error importing alert function {0}: "{1}"'.format(mod_name))
 
     try:
         func = getattr(mod, func_name)
