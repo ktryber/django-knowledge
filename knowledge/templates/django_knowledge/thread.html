@@ -3,7 +3,7 @@
 {% load i18n %}
 {% load markup %}
 {% load knowledge_tags %}
-{% load url from future %}
+{% load static %}
 
 {% block title %}{{ question.title }}{% endblock title %}
 
@@ -58,9 +58,9 @@
   {% endfor %}
 
 
-  <br/> 
+  <br/>
   <hr class="light"/>
-  <br/> 
+  <br/>
 
 
   {% if form %}
