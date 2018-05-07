@@ -207,7 +207,7 @@ def knowledge_ask(request,
     if request.method == 'POST':
         form = Form(request.user, request.POST)
         if form and form.is_valid():
-            if request.user.is_authenticated() or not form.cleaned_data['phone_number']:
+            if request.user.is_authenticated or not form.cleaned_data['phone_number']:
                 question = form.save()
                 return redirect(question.get_absolute_url())
             else:
