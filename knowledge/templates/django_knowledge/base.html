@@ -3,22 +3,22 @@
 <head>
 
   <meta charset="utf-8">
-  
+  {% load static %}
   <title>{% block title %}{% endblock title %} | Support Center</title>
-  
-  <link rel="stylesheet" href="{{ STATIC_URL }}knowledge/css/reset.css">
-  <link rel="stylesheet" href="{{ STATIC_URL }}knowledge/css/main.css">
+
+  <link rel="stylesheet" href="{% static 'knowledge/css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'knowledge/css/main.css' %}">
 
 </head>
 
 <body>
 
 <div class="wrapper">
-  
+
   {% block knowledge_inner %}
   {% endblock knowledge_inner %}
 
 </div>
-  
+
 </body>
 </html>
